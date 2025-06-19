@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salvathor.ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>salvathor.ai</h1>
+    </header>
+    <main>
+        <div id="chat-container">
+            <div id="response-area">
+                <!-- AI responses will be displayed here -->
+            </div>
+            <div id="controls-area">
+                <h2>Parametri di Generazione</h2>
+                <div class="control-group">
+                    <label for="temperature">Temperatura:</label>
+                    <input type="range" id="temperature" min="0.0" max="1.0" step="0.1" value="0.7">
+                    <span id="temperature-value">0.7</span>
+                </div>
+                <div class="control-group">
+                    <label for="top_p">Top P:</label>
+                    <input type="range" id="top_p" min="0.0" max="1.0" step="0.05" value="0.9">
+                    <span id="top_p-value">0.9</span>
+                </div>
+                <div class="control-group">
+                    <label for="top_k">Top K:</label>
+                    <input type="range" id="top_k" min="1" max="100" step="1" value="40">
+                    <span id="top_k-value">40</span>
+                </div>
+                <div class="control-group">
+                    <label for="max_tokens">Max Tokens (approx. words):</label>
+                    <input type="range" id="max_tokens" min="100" max="4000" step="100" value="800">
+                     <span id="max_tokens-value">800</span>
+                </div>
+            </div>
+            <div id="input-area">
+                <textarea id="prompt-input" placeholder="Scrivi qui il tuo prompt..."></textarea>
+                <button id="submit-button">Invia</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

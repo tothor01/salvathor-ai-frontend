@@ -1,0 +1,166 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header h1 {
+    color: #00aaff; /* A bright color for the name */
+    margin-bottom: 20px;
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#response-area {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 60vh; /* Limit height and enable scrolling */
+}
+
+#controls-area {
+    padding: 15px;
+    border-bottom: 1px solid #3a3a3a;
+    background-color: #3a3a3a;
+}
+
+#controls-area h2 {
+    color: #00aaff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.control-group label {
+    width: 180px; /* Fixed width for labels */
+    margin-right: 10px;
+    color: #cccccc;
+}
+
+.control-group input[type="range"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #555;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.control-group input[type="range"]:hover {
+    opacity: 1;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #00aaff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #00aaff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.control-group span {
+    min-width: 30px; /* Ensure space for the value */
+    text-align: right;
+    color: #ffffff;
+}
+
+
+#input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #3a3a3a;
+    background-color: #3a3a3a;
+}
+
+#prompt-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    resize: none; /* Disable textarea resizing */
+    min-height: 40px;
+}
+
+#prompt-input::placeholder {
+    color: #cccccc;
+}
+
+#submit-button {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #0088cc;
+}
+
+.user-message, .ai-message, .error-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #0056b3; /* Blueish for user */
+    align-self: flex-end;
+    margin-left: auto; /* Align to the right */
+}
+
+.ai-message {
+    background-color: #555; /* Grayish for AI */
+    align-self: flex-start;
+    margin-right: auto; /* Align to the left */
+}
+
+.error-message {
+    background-color: #cc0000; /* Red for errors */
+    color: white;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
